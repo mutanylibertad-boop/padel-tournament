@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="description" content="Aplicación para gestionar torneos de pádel con desempates automáticos">
     <meta name="theme-color" content="#ff66ff">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,14 +27,14 @@
         /* HEADER CON TEMA SELECTOR */
         header {
             text-align: center;
-            margin-bottom: 40px;
-            padding: 30px;
+            margin-bottom: 30px;
+            padding: 20px 15px;
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
 
-        h1 { font-size: 3.5em; font-weight: 900; margin-bottom: 10px; letter-spacing: 2px; }
-        .subtitle { font-size: 1.1em; margin-bottom: 25px; opacity: 0.85; font-weight: 500; }
+        h1 { font-size: 3.5em; font-weight: 900; margin-bottom: 8px; letter-spacing: 2px; line-height: 1.1; }
+        .subtitle { font-size: 1.1em; margin-bottom: 15px; opacity: 0.85; font-weight: 500; }
 
         .theme-selector {
             display: flex;
@@ -299,384 +300,130 @@
 
         .hidden { display: none !important; }
 
-        /* ===== TEMA 1 - Minimalista Limpio (Basado en Azul) ===== */
+        /* ===== TEMA 1 - Azul Suave ===== */
         body.theme-1 {
-            background: #ffffff;
-            color: #1a1a1a;
+            background: linear-gradient(135deg, #e8f0f8 0%, #d4e4f0 100%);
+            color: #2c3e50;
             font-family: 'Poppins', sans-serif;
         }
-        body.theme-1 header { background: #f5f5f5; border: 1px solid #e0e0e0; }
-        body.theme-1 h1 { color: #1a1a1a; }
-        body.theme-1 .subtitle { color: #666666; }
-        body.theme-1 .section { background: #ffffff; border: 2px solid #e0e0e0; }
-        body.theme-1 .section-title { color: #0066cc; border-color: #0066cc; }
-        body.theme-1 .theme-btn { color: #0066cc; border-color: #0066cc; background: #ffffff; }
-        body.theme-1 .theme-btn.active { background: #0066cc; color: #ffffff; }
-        body.theme-1 .count-btn { color: #1a1a1a; border-color: #cccccc; background: #ffffff; }
-        body.theme-1 .count-btn.active { background: #0066cc; color: #ffffff; border-color: #0066cc; }
-        body.theme-1 button { background: #0066cc; color: #ffffff; border: none; }
-        body.theme-1 button.secondary { background: #e0e0e0; color: #1a1a1a; }
-        body.theme-1 input { background: #ffffff; border-color: #cccccc; color: #1a1a1a; }
-        body.theme-1 input:focus { border-color: #0066cc; }
-        body.theme-1 .status-card { background: #f9f9f9; border-color: #cccccc; }
-        body.theme-1 .status-value { color: #0066cc; }
-        body.theme-1 .court-card { background: #fafafa; border-color: #e0e0e0; }
-        body.theme-1 .court-card.complete { border-color: #0066cc; }
-        body.theme-1 .match-container { background: #ffffff; border-color: #cccccc; }
-        body.theme-1 .team-box { border-color: #cccccc; border-left-color: #0066cc; }
-        body.theme-1 .score-display { border-color: #0066cc; color: #0066cc; background: #f0f5ff; }
-        body.theme-1 .court-status { border-color: #cccccc; background: #f9f9f9; }
-        body.theme-1 .podium-place { border-color: #e0e0e0; background: #fafafa; }
-        body.theme-1 .podium-place.first { border-color: #0066cc; background: #f0f5ff; }
-        body.theme-1 .medal { color: #ffc107; }
-        body.theme-1 .podium-points { color: #0066cc; }
-        body.theme-1 .ranking-table th { border-color: #0066cc; background: #f0f5ff; color: #0066cc; }
-        body.theme-1 .ranking-table td { border-color: #e0e0e0; }
-        body.theme-1 .modal-content { background: #ffffff; border: 2px solid #e0e0e0; }
-        body.theme-1 .modal-title { color: #0066cc; }
-        body.theme-1 textarea { background: #f9f9f9; border-color: #cccccc; color: #1a1a1a; }
+        body.theme-1 header { background: rgba(255, 255, 255, 0.7); border: 2px solid #5a8fb4; }
+        body.theme-1 h1 { color: #2c5aa0; }
+        body.theme-1 .subtitle { color: #5a8fb4; }
+        body.theme-1 .section { background: rgba(255, 255, 255, 0.85); border: 2px solid #5a8fb4; }
+        body.theme-1 .section-title { color: #2c5aa0; border-color: #2c5aa0; }
+        body.theme-1 button { background: #2c5aa0; color: #ffffff; }
+        body.theme-1 button.secondary { background: #5a8fb4; color: #ffffff; }
+        body.theme-1 input { background: #ffffff; border-color: #5a8fb4; color: #2c3e50; }
+        body.theme-1 input:focus { border-color: #2c5aa0; }
+        body.theme-1 .status-value { color: #2c5aa0; }
+        body.theme-1 .court-card { background: rgba(255, 255, 255, 0.8); border-color: #5a8fb4; }
+        body.theme-1 .court-card.complete { border-color: #2c5aa0; }
+        body.theme-1 .score-display { border-color: #2c5aa0; color: #2c5aa0; }
+        body.theme-1 .podium-place.first { border-color: #2c5aa0; }
+        body.theme-1 .podium-points { color: #2c5aa0; }
+        body.theme-1 .ranking-table th { border-color: #2c5aa0; background: rgba(44, 90, 160, 0.1); color: #2c5aa0; }
+        body.theme-1 .modal-content { background: rgba(255, 255, 255, 0.9); border: 2px solid #5a8fb4; }
+        body.theme-1 .modal-title { color: #2c5aa0; }
 
-        /* ===== TEMA 2 - Dark Vibrante (Basado en Verde) ===== */
+        /* ===== TEMA 2 - Verde Tierra ===== */
         body.theme-2 {
-            background: #0f1419;
-            color: #e0f5e0;
+            background: linear-gradient(135deg, #e8f0e8 0%, #d4e4d4 100%);
+            color: #2d4a2d;
             font-family: 'Poppins', sans-serif;
-            font-weight: 500;
         }
-        body.theme-2 header { background: rgba(20, 40, 25, 0.6); border: 2px solid #00dd44; }
-        body.theme-2 h1 { color: #00dd44; text-shadow: 0 0 20px rgba(0, 221, 68, 0.5); }
-        body.theme-2 .subtitle { color: #88ff88; }
-        body.theme-2 .section { background: rgba(15, 30, 20, 0.8); border: 2px solid #00aa33; }
-        body.theme-2 .section-title { color: #00ff55; border-color: #00ff55; text-shadow: 0 0 10px rgba(0, 255, 85, 0.4); }
-        body.theme-2 .theme-btn { color: #00ff55; border-color: #00ff55; background: transparent; }
-        body.theme-2 .theme-btn.active { background: #00ff55; color: #0f1419; }
-        body.theme-2 .count-btn { color: #e0f5e0; border-color: #00aa33; background: transparent; }
-        body.theme-2 .count-btn.active { background: #00ff55; color: #0f1419; border-color: #00ff55; }
-        body.theme-2 button { background: #00ff55; color: #0f1419; }
-        body.theme-2 button.secondary { background: #00aa33; color: #e0f5e0; }
-        body.theme-2 input { background: #1a2820; border-color: #00aa33; color: #e0f5e0; }
-        body.theme-2 input:focus { border-color: #00ff55; box-shadow: 0 0 15px rgba(0, 255, 85, 0.4); }
-        body.theme-2 .status-card { background: rgba(0, 100, 30, 0.2); border-color: #00aa33; }
-        body.theme-2 .status-value { color: #00ff55; text-shadow: 0 0 10px rgba(0, 255, 85, 0.6); }
-        body.theme-2 .court-card { background: rgba(20, 35, 25, 0.7); border-color: #00aa33; }
-        body.theme-2 .court-card.complete { border-color: #00ff55; box-shadow: 0 0 20px rgba(0, 255, 85, 0.3); }
-        body.theme-2 .match-container { background: rgba(15, 30, 20, 0.5); border-color: #00aa33; }
-        body.theme-2 .team-box { border-color: #00aa33; border-left-color: #00ff55; }
-        body.theme-2 .score-display { border-color: #00ff55; color: #00ff55; background: transparent; text-shadow: 0 0 10px rgba(0, 255, 85, 0.5); }
-        body.theme-2 .court-status { border-color: #00aa33; background: rgba(0, 100, 30, 0.1); }
-        body.theme-2 .podium-place { border-color: #00aa33; background: rgba(20, 35, 25, 0.7); }
-        body.theme-2 .podium-place.first { border-color: #00ff55; box-shadow: 0 0 30px rgba(0, 255, 85, 0.4); }
-        body.theme-2 .medal { color: #ffff00; text-shadow: 0 0 10px rgba(255, 255, 0, 0.5); }
-        body.theme-2 .podium-points { color: #00ff55; text-shadow: 0 0 10px rgba(0, 255, 85, 0.6); }
-        body.theme-2 .ranking-table th { border-color: #00ff55; background: rgba(0, 100, 30, 0.2); color: #00ff55; }
-        body.theme-2 .ranking-table td { border-color: #00aa33; }
-        body.theme-2 .modal-content { background: rgba(15, 30, 20, 0.95); border: 2px solid #00aa33; }
-        body.theme-2 .modal-title { color: #00ff55; }
-        body.theme-2 textarea { background: #1a2820; border-color: #00aa33; color: #e0f5e0; }
+        body.theme-2 header { background: rgba(255, 255, 255, 0.7); border: 2px solid #5a8f5a; }
+        body.theme-2 h1 { color: #2d6b2d; }
+        body.theme-2 .subtitle { color: #5a8f5a; }
+        body.theme-2 .section { background: rgba(255, 255, 255, 0.85); border: 2px solid #5a8f5a; }
+        body.theme-2 .section-title { color: #2d6b2d; border-color: #2d6b2d; }
+        body.theme-2 button { background: #2d6b2d; color: #ffffff; }
+        body.theme-2 button.secondary { background: #5a8f5a; color: #ffffff; }
+        body.theme-2 input { background: #ffffff; border-color: #5a8f5a; color: #2d4a2d; }
+        body.theme-2 input:focus { border-color: #2d6b2d; }
+        body.theme-2 .status-value { color: #2d6b2d; }
+        body.theme-2 .court-card { background: rgba(255, 255, 255, 0.8); border-color: #5a8f5a; }
+        body.theme-2 .court-card.complete { border-color: #2d6b2d; }
+        body.theme-2 .score-display { border-color: #2d6b2d; color: #2d6b2d; }
+        body.theme-2 .podium-place.first { border-color: #2d6b2d; }
+        body.theme-2 .podium-points { color: #2d6b2d; }
+        body.theme-2 .ranking-table th { border-color: #2d6b2d; background: rgba(45, 107, 45, 0.1); color: #2d6b2d; }
+        body.theme-2 .modal-content { background: rgba(255, 255, 255, 0.9); border: 2px solid #5a8f5a; }
+        body.theme-2 .modal-title { color: #2d6b2d; }
 
-        /* ===== TEMA 3 - Gradiente Púrpura (Basado en Púrpura) ===== */
+        /* ===== TEMA 3 - Púrpura Suave (ACTUAL) ===== */
         body.theme-3 {
             background: linear-gradient(135deg, #1a0f35 0%, #2d1b4e 100%);
             color: #f0e6ff;
             font-family: 'Poppins', sans-serif;
-            font-weight: 600;
         }
-        body.theme-3 header { background: rgba(50, 25, 80, 0.7); border: 2px solid #aa44ff; }
-        body.theme-3 h1 { color: #ff66ff; text-shadow: 0 0 20px rgba(255, 102, 255, 0.4); }
-        body.theme-3 .subtitle { color: #cc99ff; }
-        body.theme-3 .section { background: rgba(40, 20, 70, 0.85); border: 2px solid #8833cc; }
-        body.theme-3 .section-title { color: #ff66ff; border-color: #ff66ff; }
-        body.theme-3 .theme-btn { color: #ff66ff; border-color: #ff66ff; background: transparent; }
-        body.theme-3 .theme-btn.active { background: #ff66ff; color: #1a0f35; }
-        body.theme-3 .count-btn { color: #f0e6ff; border-color: #8833cc; background: transparent; }
-        body.theme-3 .count-btn.active { background: #ff66ff; color: #1a0f35; border-color: #ff66ff; }
-        body.theme-3 button { background: #ff66ff; color: #1a0f35; }
-        body.theme-3 button.secondary { background: #8833cc; color: #f0e6ff; }
-        body.theme-3 input { background: #2d1b4e; border-color: #8833cc; color: #f0e6ff; }
-        body.theme-3 input:focus { border-color: #ff66ff; box-shadow: 0 0 15px rgba(255, 102, 255, 0.3); }
-        body.theme-3 .status-card { background: rgba(136, 51, 204, 0.15); border-color: #8833cc; }
-        body.theme-3 .status-value { color: #ff66ff; text-shadow: 0 0 10px rgba(255, 102, 255, 0.5); }
-        body.theme-3 .court-card { background: rgba(40, 20, 70, 0.8); border-color: #8833cc; }
-        body.theme-3 .court-card.complete { border-color: #ff66ff; box-shadow: 0 0 20px rgba(255, 102, 255, 0.25); }
-        body.theme-3 .match-container { background: rgba(40, 20, 70, 0.5); border-color: #8833cc; }
-        body.theme-3 .team-box { border-color: #8833cc; border-left-color: #ff66ff; }
-        body.theme-3 .score-display { border-color: #ff66ff; color: #ff66ff; background: transparent; }
-        body.theme-3 .court-status { border-color: #8833cc; background: rgba(136, 51, 204, 0.1); }
-        body.theme-3 .podium-place { border-color: #8833cc; background: rgba(40, 20, 70, 0.8); }
-        body.theme-3 .podium-place.first { border-color: #ff66ff; box-shadow: 0 0 30px rgba(255, 102, 255, 0.35); }
-        body.theme-3 .medal { color: #ffaa00; }
-        body.theme-3 .podium-points { color: #ff66ff; text-shadow: 0 0 10px rgba(255, 102, 255, 0.5); }
-        body.theme-3 .ranking-table th { border-color: #ff66ff; background: rgba(136, 51, 204, 0.15); color: #ff66ff; }
-        body.theme-3 .ranking-table td { border-color: #8833cc; }
-        body.theme-3 .modal-content { background: rgba(40, 20, 70, 0.95); border: 2px solid #8833cc; }
-        body.theme-3 .modal-title { color: #ff66ff; }
-        body.theme-3 textarea { background: #2d1b4e; border-color: #8833cc; color: #f0e6ff; }
+        body.theme-3 header { background: rgba(50, 25, 80, 0.5); border: 2px solid #8855cc; }
+        body.theme-3 h1 { color: #d977ff; }
+        body.theme-3 .subtitle { color: #b899cc; }
+        body.theme-3 .section { background: rgba(40, 20, 70, 0.7); border: 2px solid #8855cc; }
+        body.theme-3 .section-title { color: #d977ff; border-color: #d977ff; }
+        body.theme-3 button { background: #d977ff; color: #1a0f35; }
+        body.theme-3 button.secondary { background: #8855cc; color: #f0e6ff; }
+        body.theme-3 input { background: #2d1b4e; border-color: #8855cc; color: #f0e6ff; }
+        body.theme-3 input:focus { border-color: #d977ff; }
+        body.theme-3 .status-value { color: #d977ff; }
+        body.theme-3 .court-card { background: rgba(40, 20, 70, 0.6); border-color: #8855cc; }
+        body.theme-3 .court-card.complete { border-color: #d977ff; }
+        body.theme-3 .score-display { border-color: #d977ff; color: #d977ff; }
+        body.theme-3 .podium-place.first { border-color: #d977ff; }
+        body.theme-3 .podium-points { color: #d977ff; }
+        body.theme-3 .ranking-table th { border-color: #d977ff; background: rgba(136, 85, 204, 0.15); color: #d977ff; }
+        body.theme-3 .modal-content { background: rgba(40, 20, 70, 0.9); border: 2px solid #8855cc; }
+        body.theme-3 .modal-title { color: #d977ff; }
 
-        /* ===== TEMA 4 - Paleta Profesional (Custom) ===== */
+        /* ===== TEMA 4 - Coral Suave ===== */
         body.theme-4 {
-            background: #2B2D42;
-            color: #EDF2F4;
+            background: linear-gradient(135deg, #f5e8e8 0%, #ead4d4 100%);
+            color: #4a2d2d;
             font-family: 'Poppins', sans-serif;
         }
-        body.theme-4 header { background: #3a3d52; border: 3px solid #EF233C; }
-        body.theme-4 h1 { color: #EF233C; font-weight: 900; }
-        body.theme-4 .subtitle { color: #8D99AE; }
-        body.theme-4 .section { background: #3a3d52; border: 3px solid #8D99AE; }
-        body.theme-4 .section-title { color: #EF233C; border-color: #EF233C; text-transform: uppercase; font-weight: 900; }
-        body.theme-4 .theme-btn { color: #EF233C; border-color: #EF233C; background: transparent; font-weight: 700; }
-        body.theme-4 .theme-btn.active { background: #EF233C; color: #2B2D42; }
-        body.theme-4 .count-btn { color: #EDF2F4; border-color: #8D99AE; background: transparent; font-weight: 700; }
-        body.theme-4 .count-btn.active { background: #EF233C; color: #2B2D42; border-color: #EF233C; }
-        body.theme-4 button { background: #EF233C; color: #EDF2F4; font-weight: 700; border: none; }
-        body.theme-4 button:hover { background: #D90429; }
-        body.theme-4 button.secondary { background: #8D99AE; color: #2B2D42; }
-        body.theme-4 button.secondary:hover { background: #a8b0c4; }
-        body.theme-4 input { background: #2B2D42; border: 2px solid #8D99AE; color: #EDF2F4; font-weight: 500; }
-        body.theme-4 input:focus { border-color: #EF233C; box-shadow: 0 0 10px rgba(239, 35, 60, 0.3); }
-        body.theme-4 .status-card { background: #3a3d52; border-color: #8D99AE; }
-        body.theme-4 .status-value { color: #EF233C; font-weight: 900; }
-        body.theme-4 .selector-label { color: #EDF2F4; }
-        body.theme-4 .court-card { background: #3a3d52; border: 3px solid #8D99AE; }
-        body.theme-4 .court-card.complete { border-color: #EF233C; }
-        body.theme-4 .court-header { color: #EF233C; font-weight: 900; }
-        body.theme-4 .match-container { background: #2B2D42; border-color: #8D99AE; }
-        body.theme-4 .team-box { border-color: #8D99AE; border-left-color: #EF233C; }
-        body.theme-4 .team-label { color: #8D99AE; }
-        body.theme-4 .team-players { color: #EDF2F4; }
-        body.theme-4 .score-label { color: #8D99AE; }
-        body.theme-4 .score-display { border: 3px solid #EF233C; color: #EF233C; background: transparent; font-weight: 900; }
-        body.theme-4 .score-btn { border-color: #EF233C !important; color: #EF233C !important; background: transparent !important; }
-        body.theme-4 .score-btn:hover { background: #EF233C !important; color: #2B2D42 !important; }
-        body.theme-4 .court-status { border-color: #8D99AE; background: #2B2D42; }
-        body.theme-4 .court-status-label { color: #8D99AE; }
-        body.theme-4 .court-status-value { color: #EF233C; font-weight: 900; }
-        body.theme-4 .podium-place { border: 4px solid #8D99AE; background: #3a3d52; }
-        body.theme-4 .podium-place.first { border-color: #EF233C; }
-        body.theme-4 .medal { color: #EF233C; font-size: 4.5em; }
-        body.theme-4 .podium-name { color: #EDF2F4; font-weight: 900; }
-        body.theme-4 .podium-points { color: #EF233C; font-weight: 900; }
-        body.theme-4 .podium-rank { color: #8D99AE; }
-        body.theme-4 .ranking-table th { border-color: #EF233C; background: #3a3d52; color: #EF233C; font-weight: 900; }
-        body.theme-4 .ranking-table td { border-color: #8D99AE; color: #EDF2F4; }
-        body.theme-4 .player-name { color: #EDF2F4; font-weight: 900; }
-        body.theme-4 .points { color: #EF233C; font-weight: 900; }
-        body.theme-4 .modal { background: rgba(43, 45, 66, 0.95); }
-        body.theme-4 .modal-content { background: #3a3d52; border: 3px solid #8D99AE; }
-        body.theme-4 .modal-icon { color: #EF233C; }
-        body.theme-4 .modal-title { color: #EF233C; font-weight: 900; }
-        body.theme-4 textarea { background: #2B2D42; border: 2px solid #8D99AE; color: #EDF2F4; font-family: 'Mono', monospace; }
-        body.theme-4 .btn-auto { border: none !important; }
+        body.theme-4 header { background: rgba(255, 255, 255, 0.7); border: 2px solid #a85a5a; }
+        body.theme-4 h1 { color: #8a3a3a; }
+        body.theme-4 .subtitle { color: #a85a5a; }
+        body.theme-4 .section { background: rgba(255, 255, 255, 0.85); border: 2px solid #a85a5a; }
+        body.theme-4 .section-title { color: #8a3a3a; border-color: #8a3a3a; }
+        body.theme-4 button { background: #8a3a3a; color: #ffffff; }
+        body.theme-4 button.secondary { background: #a85a5a; color: #ffffff; }
+        body.theme-4 input { background: #ffffff; border-color: #a85a5a; color: #4a2d2d; }
+        body.theme-4 input:focus { border-color: #8a3a3a; }
+        body.theme-4 .status-value { color: #8a3a3a; }
+        body.theme-4 .court-card { background: rgba(255, 255, 255, 0.8); border-color: #a85a5a; }
+        body.theme-4 .court-card.complete { border-color: #8a3a3a; }
+        body.theme-4 .score-display { border-color: #8a3a3a; color: #8a3a3a; }
+        body.theme-4 .podium-place.first { border-color: #8a3a3a; }
+        body.theme-4 .podium-points { color: #8a3a3a; }
+        body.theme-4 .ranking-table th { border-color: #8a3a3a; background: rgba(138, 58, 58, 0.1); color: #8a3a3a; }
+        body.theme-4 .modal-content { background: rgba(255, 255, 255, 0.9); border: 2px solid #a85a5a; }
+        body.theme-4 .modal-title { color: #8a3a3a; }
 
-        /* ===== TEMA 5 - Coral Tropical ===== */
-        body.theme-4 {
-            background: linear-gradient(135deg, #3d1a1a 0%, #5a2525 100%);
-            color: #ffd4cc;
-            font-family: 'Poppins', sans-serif;
-        }
-        body.theme-4 header { background: rgba(90, 37, 37, 0.7); border: 2px solid #ff6b5a; }
-        body.theme-4 h1 { color: #ff6b5a; }
-        body.theme-4 .subtitle { color: #ffb3a8; }
-        body.theme-4 .section { background: rgba(60, 26, 26, 0.9); border: 2px solid #ff8f7f; }
-        body.theme-4 .section-title { color: #ff6b5a; border-color: #ff6b5a; }
-        body.theme-4 .theme-btn { color: #ff6b5a; border-color: #ff6b5a; background: transparent; }
-        body.theme-4 .theme-btn.active { background: #ff6b5a; color: #3d1a1a; }
-        body.theme-4 .count-btn { color: #ffd4cc; border-color: #ff8f7f; background: transparent; }
-        body.theme-4 .count-btn.active { background: #ff6b5a; color: #3d1a1a; border-color: #ff6b5a; }
-        body.theme-4 button { background: #ff6b5a; color: #3d1a1a; }
-        body.theme-4 button.secondary { background: #ff8f7f; color: #ffd4cc; }
-        body.theme-4 input { background: #4a2020; border-color: #ff8f7f; color: #ffd4cc; }
-        body.theme-4 input:focus { border-color: #ff6b5a; }
-        body.theme-4 .status-value { color: #ff6b5a; }
-        body.theme-4 .court-card { background: rgba(60, 26, 26, 0.8); border-color: #ff8f7f; }
-        body.theme-4 .court-card.complete { border-color: #ff6b5a; }
-        body.theme-4 .score-display { border-color: #ff6b5a; color: #ff6b5a; }
-        body.theme-4 .podium-place.first { border-color: #ff6b5a; }
-        body.theme-4 .podium-points { color: #ff6b5a; }
-        body.theme-4 .ranking-table th { border-color: #ff6b5a; background: rgba(255, 107, 90, 0.1); color: #ff6b5a; }
-        body.theme-4 .modal-content { background: rgba(60, 26, 26, 0.95); border: 2px solid #ff8f7f; }
-        body.theme-4 .modal-title { color: #ff6b5a; }
-        body.theme-4 textarea { background: #4a2020; border-color: #ff8f7f; color: #ffd4cc; }
-
-        /* ===== TEMA 5 - Océano Profundo ===== */
+        /* ===== TEMA 5 - Gris Azulado ===== */
         body.theme-5 {
-            background: linear-gradient(135deg, #0a1f3a 0%, #1a3a5a 100%);
-            color: #b3d9ff;
+            background: linear-gradient(135deg, #e8ecf0 0%, #d4dce8 100%);
+            color: #3a4754;
             font-family: 'Poppins', sans-serif;
         }
-        body.theme-5 header { background: rgba(26, 58, 90, 0.7); border: 2px solid #4a9fff; }
-        body.theme-5 h1 { color: #4a9fff; }
-        body.theme-5 .subtitle { color: #7ab3ff; }
-        body.theme-5 .section { background: rgba(15, 31, 58, 0.9); border: 2px solid #3a7fdd; }
-        body.theme-5 .section-title { color: #4a9fff; border-color: #4a9fff; }
-        body.theme-5 .theme-btn { color: #4a9fff; border-color: #4a9fff; background: transparent; }
-        body.theme-5 .theme-btn.active { background: #4a9fff; color: #0a1f3a; }
-        body.theme-5 .count-btn { color: #b3d9ff; border-color: #3a7fdd; background: transparent; }
-        body.theme-5 .count-btn.active { background: #4a9fff; color: #0a1f3a; border-color: #4a9fff; }
-        body.theme-5 button { background: #4a9fff; color: #0a1f3a; }
-        body.theme-5 button.secondary { background: #3a7fdd; color: #b3d9ff; }
-        body.theme-5 input { background: #1a3a5a; border-color: #3a7fdd; color: #b3d9ff; }
-        body.theme-5 input:focus { border-color: #4a9fff; }
-        body.theme-5 .status-value { color: #4a9fff; }
-        body.theme-5 .court-card { background: rgba(26, 58, 90, 0.8); border-color: #3a7fdd; }
-        body.theme-5 .court-card.complete { border-color: #4a9fff; }
-        body.theme-5 .score-display { border-color: #4a9fff; color: #4a9fff; }
-        body.theme-5 .podium-place.first { border-color: #4a9fff; }
-        body.theme-5 .podium-points { color: #4a9fff; }
-        body.theme-5 .ranking-table th { border-color: #4a9fff; background: rgba(74, 159, 255, 0.1); color: #4a9fff; }
-        body.theme-5 .modal-content { background: rgba(26, 58, 90, 0.95); border: 2px solid #3a7fdd; }
-        body.theme-5 .modal-title { color: #4a9fff; }
-        body.theme-5 textarea { background: #1a3a5a; border-color: #3a7fdd; color: #b3d9ff; }
-
-        /* ===== TEMA 6 - Bosque Oscuro ===== */
-        body.theme-6 {
-            background: linear-gradient(135deg, #1a2e1a 0%, #2a4a2a 100%);
-            color: #c8e6c8;
-            font-family: 'Poppins', sans-serif;
-        }
-        body.theme-6 header { background: rgba(42, 74, 42, 0.7); border: 2px solid #66d966; }
-        body.theme-6 h1 { color: #66d966; }
-        body.theme-6 .subtitle { color: #99ff99; }
-        body.theme-6 .section { background: rgba(26, 46, 26, 0.9); border: 2px solid #52b952; }
-        body.theme-6 .section-title { color: #66d966; border-color: #66d966; }
-        body.theme-6 .theme-btn { color: #66d966; border-color: #66d966; background: transparent; }
-        body.theme-6 .theme-btn.active { background: #66d966; color: #1a2e1a; }
-        body.theme-6 .count-btn { color: #c8e6c8; border-color: #52b952; background: transparent; }
-        body.theme-6 .count-btn.active { background: #66d966; color: #1a2e1a; border-color: #66d966; }
-        body.theme-6 button { background: #66d966; color: #1a2e1a; }
-        body.theme-6 button.secondary { background: #52b952; color: #c8e6c8; }
-        body.theme-6 input { background: #2a4a2a; border-color: #52b952; color: #c8e6c8; }
-        body.theme-6 input:focus { border-color: #66d966; }
-        body.theme-6 .status-value { color: #66d966; }
-        body.theme-6 .court-card { background: rgba(42, 74, 42, 0.8); border-color: #52b952; }
-        body.theme-6 .court-card.complete { border-color: #66d966; }
-        body.theme-6 .score-display { border-color: #66d966; color: #66d966; }
-        body.theme-6 .podium-place.first { border-color: #66d966; }
-        body.theme-6 .podium-points { color: #66d966; }
-        body.theme-6 .ranking-table th { border-color: #66d966; background: rgba(102, 217, 102, 0.1); color: #66d966; }
-        body.theme-6 .modal-content { background: rgba(42, 74, 42, 0.95); border: 2px solid #52b952; }
-        body.theme-6 .modal-title { color: #66d966; }
-        body.theme-6 textarea { background: #2a4a2a; border-color: #52b952; color: #c8e6c8; }
-
-        /* ===== TEMA 7 - Oro Elegante ===== */
-        body.theme-7 {
-            background: linear-gradient(135deg, #3a3015 0%, #5a5025 100%);
-            color: #ffe8a8;
-            font-family: 'Poppins', sans-serif;
-        }
-        body.theme-7 header { background: rgba(90, 80, 37, 0.7); border: 2px solid #ffd700; }
-        body.theme-7 h1 { color: #ffd700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-        body.theme-7 .subtitle { color: #ffe8a8; }
-        body.theme-7 .section { background: rgba(58, 48, 21, 0.9); border: 2px solid #ffca3a; }
-        body.theme-7 .section-title { color: #ffd700; border-color: #ffd700; }
-        body.theme-7 .theme-btn { color: #ffd700; border-color: #ffd700; background: transparent; }
-        body.theme-7 .theme-btn.active { background: #ffd700; color: #3a3015; }
-        body.theme-7 .count-btn { color: #ffe8a8; border-color: #ffca3a; background: transparent; }
-        body.theme-7 .count-btn.active { background: #ffd700; color: #3a3015; border-color: #ffd700; }
-        body.theme-7 button { background: #ffd700; color: #3a3015; }
-        body.theme-7 button.secondary { background: #ffca3a; color: #ffe8a8; }
-        body.theme-7 input { background: #4a4820; border-color: #ffca3a; color: #ffe8a8; }
-        body.theme-7 input:focus { border-color: #ffd700; }
-        body.theme-7 .status-value { color: #ffd700; }
-        body.theme-7 .court-card { background: rgba(58, 48, 21, 0.8); border-color: #ffca3a; }
-        body.theme-7 .court-card.complete { border-color: #ffd700; }
-        body.theme-7 .score-display { border-color: #ffd700; color: #ffd700; }
-        body.theme-7 .podium-place.first { border-color: #ffd700; }
-        body.theme-7 .podium-points { color: #ffd700; }
-        body.theme-7 .ranking-table th { border-color: #ffd700; background: rgba(255, 215, 0, 0.1); color: #ffd700; }
-        body.theme-7 .modal-content { background: rgba(58, 48, 21, 0.95); border: 2px solid #ffca3a; }
-        body.theme-7 .modal-title { color: #ffd700; }
-        body.theme-7 textarea { background: #4a4820; border-color: #ffca3a; color: #ffe8a8; }
-
-        /* ===== TEMA 8 - Magenta Futurista ===== */
-        body.theme-8 {
-            background: linear-gradient(135deg, #2a0f3a 0%, #4a1f5a 100%);
-            color: #ff99ff;
-            font-family: 'Poppins', sans-serif;
-        }
-        body.theme-8 header { background: rgba(74, 31, 90, 0.7); border: 2px solid #ff33ff; }
-        body.theme-8 h1 { color: #ff33ff; text-shadow: 0 0 20px rgba(255, 51, 255, 0.4); }
-        body.theme-8 .subtitle { color: #ff99ff; }
-        body.theme-8 .section { background: rgba(42, 15, 58, 0.9); border: 2px solid #dd00dd; }
-        body.theme-8 .section-title { color: #ff33ff; border-color: #ff33ff; }
-        body.theme-8 .theme-btn { color: #ff33ff; border-color: #ff33ff; background: transparent; }
-        body.theme-8 .theme-btn.active { background: #ff33ff; color: #2a0f3a; }
-        body.theme-8 .count-btn { color: #ff99ff; border-color: #dd00dd; background: transparent; }
-        body.theme-8 .count-btn.active { background: #ff33ff; color: #2a0f3a; border-color: #ff33ff; }
-        body.theme-8 button { background: #ff33ff; color: #2a0f3a; }
-        body.theme-8 button.secondary { background: #dd00dd; color: #ff99ff; }
-        body.theme-8 input { background: #3a1a4a; border-color: #dd00dd; color: #ff99ff; }
-        body.theme-8 input:focus { border-color: #ff33ff; box-shadow: 0 0 15px rgba(255, 51, 255, 0.3); }
-        body.theme-8 .status-value { color: #ff33ff; text-shadow: 0 0 10px rgba(255, 51, 255, 0.5); }
-        body.theme-8 .court-card { background: rgba(58, 15, 74, 0.8); border-color: #dd00dd; }
-        body.theme-8 .court-card.complete { border-color: #ff33ff; box-shadow: 0 0 15px rgba(255, 51, 255, 0.2); }
-        body.theme-8 .score-display { border-color: #ff33ff; color: #ff33ff; text-shadow: 0 0 10px rgba(255, 51, 255, 0.5); }
-        body.theme-8 .podium-place.first { border-color: #ff33ff; box-shadow: 0 0 20px rgba(255, 51, 255, 0.3); }
-        body.theme-8 .podium-points { color: #ff33ff; }
-        body.theme-8 .ranking-table th { border-color: #ff33ff; background: rgba(255, 51, 255, 0.1); color: #ff33ff; }
-        body.theme-8 .modal-content { background: rgba(58, 15, 74, 0.95); border: 2px solid #dd00dd; }
-        body.theme-8 .modal-title { color: #ff33ff; }
-        body.theme-8 textarea { background: #3a1a4a; border-color: #dd00dd; color: #ff99ff; }
-
-        /* ===== TEMA 9 - Anaranjado Deportivo ===== */
-        body.theme-9 {
-            background: linear-gradient(135deg, #3a1a05 0%, #5a3a15 100%);
-            color: #ffcb99;
-            font-family: 'Poppins', sans-serif;
-        }
-        body.theme-9 header { background: rgba(90, 58, 21, 0.7); border: 2px solid #ff8c42; }
-        body.theme-9 h1 { color: #ff8c42; }
-        body.theme-9 .subtitle { color: #ffb380; }
-        body.theme-9 .section { background: rgba(58, 26, 8, 0.9); border: 2px solid #ff7a2a; }
-        body.theme-9 .section-title { color: #ff8c42; border-color: #ff8c42; }
-        body.theme-9 .theme-btn { color: #ff8c42; border-color: #ff8c42; background: transparent; }
-        body.theme-9 .theme-btn.active { background: #ff8c42; color: #3a1a05; }
-        body.theme-9 .count-btn { color: #ffcb99; border-color: #ff7a2a; background: transparent; }
-        body.theme-9 .count-btn.active { background: #ff8c42; color: #3a1a05; border-color: #ff8c42; }
-        body.theme-9 button { background: #ff8c42; color: #3a1a05; }
-        body.theme-9 button.secondary { background: #ff7a2a; color: #ffcb99; }
-        body.theme-9 input { background: #4a2a10; border-color: #ff7a2a; color: #ffcb99; }
-        body.theme-9 input:focus { border-color: #ff8c42; }
-        body.theme-9 .status-value { color: #ff8c42; }
-        body.theme-9 .court-card { background: rgba(74, 42, 15, 0.8); border-color: #ff7a2a; }
-        body.theme-9 .court-card.complete { border-color: #ff8c42; }
-        body.theme-9 .score-display { border-color: #ff8c42; color: #ff8c42; }
-        body.theme-9 .podium-place.first { border-color: #ff8c42; }
-        body.theme-9 .podium-points { color: #ff8c42; }
-        body.theme-9 .ranking-table th { border-color: #ff8c42; background: rgba(255, 140, 66, 0.1); color: #ff8c42; }
-        body.theme-9 .modal-content { background: rgba(74, 42, 15, 0.95); border: 2px solid #ff7a2a; }
-        body.theme-9 .modal-title { color: #ff8c42; }
-        body.theme-9 textarea { background: #4a2a10; border-color: #ff7a2a; color: #ffcb99; }
-
-        /* ===== TEMA 10 - Cian Moderno ===== */
-        body.theme-10 {
-            background: linear-gradient(135deg, #0a2a3a 0%, #1a4a5a 100%);
-            color: #a8e6ff;
-            font-family: 'Poppins', sans-serif;
-        }
-        body.theme-10 header { background: rgba(26, 74, 90, 0.7); border: 2px solid #00d4ff; }
-        body.theme-10 h1 { color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
-        body.theme-10 .subtitle { color: #66e6ff; }
-        body.theme-10 .section { background: rgba(10, 42, 58, 0.9); border: 2px solid #00b8dd; }
-        body.theme-10 .section-title { color: #00d4ff; border-color: #00d4ff; }
-        body.theme-10 .theme-btn { color: #00d4ff; border-color: #00d4ff; background: transparent; }
-        body.theme-10 .theme-btn.active { background: #00d4ff; color: #0a2a3a; }
-        body.theme-10 .count-btn { color: #a8e6ff; border-color: #00b8dd; background: transparent; }
-        body.theme-10 .count-btn.active { background: #00d4ff; color: #0a2a3a; border-color: #00d4ff; }
-        body.theme-10 button { background: #00d4ff; color: #0a2a3a; }
-        body.theme-10 button.secondary { background: #00b8dd; color: #a8e6ff; }
-        body.theme-10 input { background: #1a4a5a; border-color: #00b8dd; color: #a8e6ff; }
-        body.theme-10 input:focus { border-color: #00d4ff; box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); }
-        body.theme-10 .status-value { color: #00d4ff; }
-        body.theme-10 .court-card { background: rgba(26, 74, 90, 0.8); border-color: #00b8dd; }
-        body.theme-10 .court-card.complete { border-color: #00d4ff; box-shadow: 0 0 15px rgba(0, 212, 255, 0.2); }
-        body.theme-10 .score-display { border-color: #00d4ff; color: #00d4ff; }
-        body.theme-10 .podium-place.first { border-color: #00d4ff; }
-        body.theme-10 .podium-points { color: #00d4ff; }
-        body.theme-10 .ranking-table th { border-color: #00d4ff; background: rgba(0, 212, 255, 0.1); color: #00d4ff; }
-        body.theme-10 .modal-content { background: rgba(26, 74, 90, 0.95); border: 2px solid #00b8dd; }
-        body.theme-10 .modal-title { color: #00d4ff; }
-        body.theme-10 textarea { background: #1a4a5a; border-color: #00b8dd; color: #a8e6ff; }
-
+        body.theme-5 header { background: rgba(255, 255, 255, 0.7); border: 2px solid #6a8fa8; }
+        body.theme-5 h1 { color: #3a5a7a; }
+        body.theme-5 .subtitle { color: #6a8fa8; }
+        body.theme-5 .section { background: rgba(255, 255, 255, 0.85); border: 2px solid #6a8fa8; }
+        body.theme-5 .section-title { color: #3a5a7a; border-color: #3a5a7a; }
+        body.theme-5 button { background: #3a5a7a; color: #ffffff; }
+        body.theme-5 button.secondary { background: #6a8fa8; color: #ffffff; }
+        body.theme-5 input { background: #ffffff; border-color: #6a8fa8; color: #3a4754; }
+        body.theme-5 input:focus { border-color: #3a5a7a; }
+        body.theme-5 .status-value { color: #3a5a7a; }
+        body.theme-5 .court-card { background: rgba(255, 255, 255, 0.8); border-color: #6a8fa8; }
+        body.theme-5 .court-card.complete { border-color: #3a5a7a; }
+        body.theme-5 .score-display { border-color: #3a5a7a; color: #3a5a7a; }
+        body.theme-5 .podium-place.first { border-color: #3a5a7a; }
+        body.theme-5 .podium-points { color: #3a5a7a; }
+        body.theme-5 .ranking-table th { border-color: #3a5a7a; background: rgba(58, 90, 122, 0.1); color: #3a5a7a; }
+        body.theme-5 .modal-content { background: rgba(255, 255, 255, 0.9); border: 2px solid #6a8fa8; }
+        body.theme-5 .modal-title { color: #3a5a7a; }
         @media (max-width: 1200px) {
             h1 { font-size: 2.8em; }
             .section { padding: 25px; }
@@ -698,12 +445,27 @@
 <body class="theme-1">
     <div class="container">
         <header>
-            <h1>⚡ TORNEO PÁDEL</h1>
+            <h1>🎾 TORNEO PÁDEL</h1>
             <p class="subtitle">Gestiona tu torneo • Juega • Compite</p>
         </header>
 
+        <div style="padding: 15px; margin-bottom: 20px; border-radius: 12px; background: rgba(0,0,0,0.1);">
+            <div style="font-size: 0.9em; margin-bottom: 12px; opacity: 0.8; text-align: center;">🎨 Selecciona un tema:</div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <button onclick="document.body.className='theme-1'" style="flex: 1; min-width: 70px; padding: 10px; background: linear-gradient(135deg, #e8f0f8 0%, #d4e4f0 100%); color: #2c5aa0; border: 2px solid #2c5aa0; border-radius: 8px; font-weight: 700; cursor: pointer;">Azul</button>
+                <button onclick="document.body.className='theme-2'" style="flex: 1; min-width: 70px; padding: 10px; background: linear-gradient(135deg, #e8f0e8 0%, #d4e4d4 100%); color: #2d6b2d; border: 2px solid #2d6b2d; border-radius: 8px; font-weight: 700; cursor: pointer;">Verde</button>
+                <button onclick="document.body.className='theme-3'" style="flex: 1; min-width: 70px; padding: 10px; background: linear-gradient(135deg, #1a0f35 0%, #2d1b4e 100%); color: #d977ff; border: 2px solid #d977ff; border-radius: 8px; font-weight: 700; cursor: pointer;">Púrpura</button>
+                <button onclick="document.body.className='theme-4'" style="flex: 1; min-width: 70px; padding: 10px; background: linear-gradient(135deg, #f5e8e8 0%, #ead4d4 100%); color: #8a3a3a; border: 2px solid #8a3a3a; border-radius: 8px; font-weight: 700; cursor: pointer;">Coral</button>
+                <button onclick="document.body.className='theme-5'" style="flex: 1; min-width: 70px; padding: 10px; background: linear-gradient(135deg, #e8ecf0 0%, #d4dce8 100%); color: #3a5a7a; border: 2px solid #3a5a7a; border-radius: 8px; font-weight: 700; cursor: pointer;">Gris</button>
+            </div>
+        </div>
+
         <div id="step1" class="section">
             <h2 class="section-title">⚙️ Configuración del Torneo</h2>
+            <p style="color: #cc99ff; font-size: 0.95em; margin-bottom: 20px; line-height: 1.5;">
+                📋 Aquí configuras los detalles básicos de tu torneo. Selecciona cuántas canchas usarás en paralelo, 
+                cuántos jugadores participarán e ingresa sus nombres. ¡Luego inicia el torneo!
+            </p>
             
             <div class="selector-group">
                 <div class="selector-label">🎾 Número de Canchas en Paralelo</div>
@@ -728,6 +490,10 @@
 
         <div id="step2" class="section hidden">
             <h2 class="section-title">🎮 Registro de Resultados</h2>
+            <p style="color: #cc99ff; font-size: 0.95em; margin-bottom: 20px; line-height: 1.5;">
+                📊 Ahora registra los resultados de cada cancha. Usa los botones +/- para anotar los sets ganados. 
+                Cada cancha debe totalizar exactamente 5 sets. ¡Cuando termines, finaliza el torneo!
+            </p>
             
             <div class="status-card">
                 <div class="status-label">📊 Ronda Actual</div>
@@ -748,11 +514,15 @@
 
         <div id="tiebreakStep" class="section hidden">
             <h2 class="section-title">⚖️ Desempate TOP 3 - 1 SET</h2>
+            <p style="color: #cc99ff; font-size: 0.95em; margin-bottom: 20px; line-height: 1.5;">
+                🎾 ¡Hay un empate en el TOP 3! Juegan un set decisivo. Selecciona quién gana este set 
+                y el ganador subirá en la posición.
+            </p>
             <div style="padding: 20px; border-radius: 12px; border: 3px solid; margin-bottom: 25px; text-align: center;">
                 <div style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;" id="tiebreakMessage"></div>
                 
                 <div class="court-card">
-                    <div class="court-header">🎾 DESEMPATE - 1 SET DECISIVO</div>
+                    <div class="court-header">⚡ DESEMPATE - 1 SET DECISIVO</div>
                     <div class="match-container" id="tiebreakCourtDisplay"></div>
                     <div class="court-status">
                         <div class="court-status-label">⚠️ GANADOR</div>
@@ -765,6 +535,10 @@
 
         <div id="step3" class="section hidden">
             <h2 class="section-title">🏆 Resultados Finales</h2>
+            <p style="color: #cc99ff; font-size: 0.95em; margin-bottom: 20px; line-height: 1.5;">
+                🎊 ¡Torneo terminado! Aquí está el ranking final con los mejores jugadores. 
+                Puedes copiar los resultados para compartir en WhatsApp.
+            </p>
             
             <div class="podium" id="podiumDisplay"></div>
 
@@ -1012,7 +786,7 @@
 
                     return `
                         <div class="court-card ${isComplete ? 'complete' : ''}">
-                            <div class="court-header">🎾 Cancha ${courtIdx + 1}</div>
+                            <div class="court-header">🏆 Cancha ${courtIdx + 1}</div>
                             <div class="match-container">
                                 <div class="team-box">
                                     <div class="team-info">
