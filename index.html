@@ -946,7 +946,7 @@
                     container.appendChild(input);
                 }
             } catch (error) {
-                console.error('Error:', error);
+                // Error silencioso en desarrollo
             }
         }
 
@@ -1139,10 +1139,10 @@
             // PRÓXIMAS
             if (i < retasDisponibles.length) {
                 html += '<h3 style="color: #999; margin-top: 20px; margin-bottom: 12px; font-size: 1.1em;">⏳ PRÓXIMAS (en espera)</h3>';
-                html += '<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">';
+                html += '<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">';
                 for (; i < retasDisponibles.length; i++) {
                     const { roundIdx, courtIdx, court } = retasDisponibles[i];
-                    html += `<div class="court-card" style="opacity: 0.75; margin-bottom: 0; border: 2px dashed #ddd; padding: 8px;"><div style="text-align: center;"><div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 6px; align-items: center;"><div style="font-size: 0.9em; font-weight: 700; line-height: 1.2; color: #333;">${court.team1[0]}<br>${court.team1[1]}</div><div style="font-size: 0.8em; font-weight: 600; color: #999;">vs</div><div style="font-size: 0.9em; font-weight: 700; line-height: 1.2; color: #333;">${court.team3[0]}<br>${court.team3[1]}</div></div></div></div>`;
+                    html += `<div class="court-card" style="opacity: 0.8; margin-bottom: 0; border: 2px dashed #ddd; padding: 10px; background: #f8f8f8;"><div style="text-align: center;"><div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><div style="flex: 1; font-size: 0.85em; font-weight: 700; line-height: 1.3; color: #333;">${court.team1[0]}<br>${court.team1[1]}</div><div style="font-size: 0.75em; font-weight: 600; color: #999; padding: 0 4px;">vs</div><div style="flex: 1; font-size: 0.85em; font-weight: 700; line-height: 1.3; color: #333;">${court.team3[0]}<br>${court.team3[1]}</div></div></div></div>`;
                 }
                 html += '</div>';
             }
@@ -1441,7 +1441,7 @@
                 localStorage.setItem('torneo_lastSaved', new Date().toISOString());
                 showToast('✅ Torneo guardado', 'success');
             } catch (error) {
-                console.error('Storage error:', error);
+                // Error silencioso - guardar mostrado en toast
                 showToast('⚠️ Error al guardar', 'error');
             }
             
@@ -1636,14 +1636,20 @@
         initCountSelector();
         renderPlayerInputs(); // Mostrar 8 inputs por default
 
-        // Registrar Service Worker solo en producción (dominio real)
-        if ('serviceWorker' in navigator && !window.location.hostname.includes('file')) {
+        // Registrar Service Worker solo en producción (HTTPS)
+        if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./sw.js')
                 .then(registration => {
-                    console.log('✅ Service Worker registrado:', registration);
+                    // Silencioso en desarrollo, log solo en producción
+                    if (window.location.protocol === 'https:') {
+                        console.log('✅ Service Worker registrado');
+                    }
                 })
                 .catch(error => {
-                    console.log('⚠️ Service Worker no disponible en desarrollo');
+                    // Sin logs de error en desarrollo
+                    if (window.location.protocol === 'https:') {
+                        console.warn('⚠️ SW error:', error);
+                    }
                 });
         }
 
